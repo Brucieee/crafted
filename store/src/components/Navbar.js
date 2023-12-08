@@ -3,6 +3,7 @@ import { useState, useContext } from 'react';
 import { CartContext } from "../CartContext";
 import CartProduct from './CartProduct';
 
+
 function NavbarComponent() {
     const cart = useContext(CartContext);
 
@@ -21,7 +22,7 @@ function NavbarComponent() {
             return response.json();
         }).then((response) => {
             if (response.url) {
-                window.location.assign(response.url); // Forwarding user to Stripe
+                window.location.assign(response.url);
             }
         });
     }
@@ -36,7 +37,7 @@ function NavbarComponent() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/about">About Us</Nav.Link>
+                        <Nav.Link href="/AboutUs">About Us</Nav.Link>
                     </Nav>
                     <Button onClick={handleShow}>Cart ({productsCount} Items)</Button>
                 </Navbar.Collapse>

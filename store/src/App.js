@@ -8,6 +8,7 @@ import Store from './pages/Store';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
 import CartProvider from './CartContext';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Store/>}/>
           <Route path="success" element={<Success/>}/>
           <Route path="cancel" element={<Cancel/>}/>
+          <Route path="aboutus" element={<AboutUs/>}/>
         </Routes>
       </BrowserRouter>
       </Container>
